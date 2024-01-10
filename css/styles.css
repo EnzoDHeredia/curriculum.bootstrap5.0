@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
 :root {
     --primarioOscuro: #89119d;
     --secundario: #ffce00;
@@ -30,7 +31,10 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-family: var(--fuentePrincipal);
-    background: linear-gradient(to top, #CCCCCC 0%, #EEEEEE 100%);
+    background-image: url('../img/fondo1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background: linear-gradient(to top, #CCCCCC 0%, #EEEEEE 100%);*/
 }
 /* Tipografia*/
 h1 {
@@ -44,7 +48,8 @@ h3 {
 }
 .sombras {
     box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
-    background-color: var(--blanco);
+    background-color: rgba(255, 255, 255, 0.5);
+    /*background-color: var(--blanco);*/
     padding: 2rem;
     border-radius: 1rem;
 }
@@ -53,23 +58,165 @@ h3 {
     margin: 50px auto;
 }
 .fondo {
-    background-image: url('../img/estudios-desarrollador-web.webp');
-    color: var(--blanco);
+    
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--negro);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .experiencia {
     background: #e6e6e9;
+    background-color: rgba(255, 255, 255, 0.5);
     color: black;
     padding: 1rem 0 1rem 1rem;
     text-transform: uppercase;
 }
-.skill {
-    display: grid;
-    grid-template-columns: 0.2fr 0.5fr;
+.footer {
+    background-color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    color: black;
+    padding: 0.5rem;
+    border-radius: 10px; /* Agrega esquinas redondas */
+}
+
+.centrar {
+    text-align: center;
+}
+.skill{
+    margin-bottom: 1rem;
+}
+.lead {
+    margin:0;
 }
 .progress-bar {
     -webkit-transition: width 1s ease;
     transition: width 1s ease;
 }
+#datos-personales .container {
+    background-color: rgba(255, 255, 255, 0.5);
+}
 
+.console-container {
+    font-family:Krub;
+    font-size:4.2em;
+    text-align:center;
+    display:block;
+    color:white;
+    margin:auto;
+}
+.console-underscore {
+    display:inline-block;
+   position:relative;
+   top:-0.14em;
+   left:10px;
+ }
+
+
+/*Animacion arcoiris*/
+.experiencia {
+    position: relative;
+    background-color: #fff;
+    border-radius: 75px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    transition: 1s box-shadow;
+  }
+  
+  .experiencia:hover {
+    box-shadow: 0 5px 35px 0px rgba(0,0,0,.1);
+  }
+  
+  .experiencia:hover::before, .experiencia:hover::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #FDA8CF;
+    border-radius: 75px;
+    z-index: -1;
+    animation: 1s clockwise infinite;
+  }
+  
+  .experiencia:hover:after {
+    background: #F3CE5E;
+    animation: 2s counterclockwise infinite;
+  }
+  
+  @keyframes clockwise {
+    0% {
+      top: -5px;
+      left: 0;
+    }
+    12% {
+      top: -2px;
+      left: 2px;
+    }
+    25% {
+      top: 0;
+      left: 5px;    
+    }
+    37% {
+      top: 2px;
+      left: 2px;
+    }
+    50% {
+      top: 5px;
+      left: 0;    
+    }
+    62% {
+      top: 2px;
+      left: -2px;
+    }
+    75% {
+      top: 0;
+      left: -5px;
+    }
+    87% {
+      top: -2px;
+      left: -2px;
+    }
+    100% {
+      top: -5px;
+      left: 0;    
+    }
+  }
+  
+  @keyframes counterclockwise {
+    0% {
+      top: -5px;
+      right: 0;
+    }
+    12% {
+      top: -2px;
+      right: 2px;
+    }
+    25% {
+      top: 0;
+      right: 5px;    
+    }
+    37% {
+      top: 2px;
+      right: 2px;
+    }
+    50% {
+      top: 5px;
+      right: 0;    
+    }
+    62% {
+      top: 2px;
+      right: -2px;
+    }
+    75% {
+      top: 0;
+      right: -5px;
+    }
+    87% {
+      top: -2px;
+      right: -2px;
+    }
+    100% {
+      top: -5px;
+      right: 0;    
+    }
+  }
